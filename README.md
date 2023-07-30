@@ -25,6 +25,7 @@ I replaced the old signing up mechanism with one that uses email verification to
 I also implemented the password reset and password change the same way the book taught me to. So that wasn’t so new to me except the fact that writing the code for it without copying and pasting is pretty challenging.
 ![Log in](https://github.com/Jawdat-Tayfour/LoveLocksProject/assets/40719001/6296238d-a4da-4564-b7f4-fb2af3bdb335)
 ![Forgot Your Password](https://github.com/Jawdat-Tayfour/LoveLocksProject/assets/40719001/54755e31-a02d-489a-aee5-024b0069afed)
+![Profile Settings](https://github.com/Jawdat-Tayfour/LoveLocksProject/assets/40719001/0211b49d-a4e2-4876-a2e0-7b80bd458c16)
 ![Change Password](https://github.com/Jawdat-Tayfour/LoveLocksProject/assets/40719001/d9580ad0-b064-4edc-a8a4-2b8f81bff05c)
 ![Email For Password Reset](https://github.com/Jawdat-Tayfour/LoveLocksProject/assets/40719001/6fa6eca5-1519-41d4-84e2-a2e31f5568a6)
 

@@ -5,7 +5,6 @@ A Django Open Source Project To Simulate The Love Locks That Were Removed Of Pon
 A Django Open Source Project To Simulate The Love Locks That Were Removed Of Pont Des Arts Bridge In Paris
 
 
-![Accept Request or Decline it](https://github.com/Jawdat-Tayfour/LoveLocksProject/assets/40719001/11582ffc-67fc-4780-a3c0-6dd99a917784)
 
 
 " The bridge couldn't survive and the Town Hall was forced to remove them in 2015 after part of the bridge collapsed."
@@ -24,6 +23,10 @@ I have already built the skeleton of the website.
 I replaced the old signing up mechanism with one that uses email verification to ensure that all of my users are real users. And got to learn more about tokens generation, temporarily links and how verifying by email works
 
 I also implemented the password reset and password change the same way the book taught me to. So that wasn’t so new to me except the fact that writing the code for it without copying and pasting is pretty challenging.
+![Log in](https://github.com/Jawdat-Tayfour/LoveLocksProject/assets/40719001/6296238d-a4da-4564-b7f4-fb2af3bdb335)
+![Forgot Your Password](https://github.com/Jawdat-Tayfour/LoveLocksProject/assets/40719001/54755e31-a02d-489a-aee5-024b0069afed)
+![Change Password](https://github.com/Jawdat-Tayfour/LoveLocksProject/assets/40719001/d9580ad0-b064-4edc-a8a4-2b8f81bff05c)
+![Email For Password Reset](https://github.com/Jawdat-Tayfour/LoveLocksProject/assets/40719001/6fa6eca5-1519-41d4-84e2-a2e31f5568a6)
 
 I also learned how to fetch certain data from the database through reading many blogs and watching many tutorials about the subject, I created my own very simple User-Search functionality in this website.
 
@@ -33,28 +36,53 @@ And a padlock in this scenario is a mutual Post that has a title of choice “Yo
 
 Ok, so the whole thing until this point work this way to put it simply: 
 - Create an account and verify from the link in you email
+Sign Up : 
+![Sign up](https://github.com/Jawdat-Tayfour/LoveLocksProject/assets/40719001/2f35b9ac-2be3-4c14-aab1-d21fa2bc89ab)
+
 - Login to your account 
+![Log in](https://github.com/Jawdat-Tayfour/LoveLocksProject/assets/40719001/df48f485-f1fb-4d7f-91e1-3c280028b71f)
+
 - Search for the account of the person that you want to create the padlock
+![Search for users](https://github.com/Jawdat-Tayfour/LoveLocksProject/assets/40719001/7672bf57-1e5e-4c95-b63d-a8ce46d9d32b)
+
 - Request to create a lock with them (send a Lock Request)
+![Search for users](https://github.com/Jawdat-Tayfour/LoveLocksProject/assets/40719001/00dd380c-bea9-4c1f-b319-df7decc0ca3f)
+
 - Wait until they accept the request
+![Accept Request or Decline it](https://github.com/Jawdat-Tayfour/LoveLocksProject/assets/40719001/92acd511-57cf-46c7-9d87-a0d351c81bb3)
+![Post-Accept](https://github.com/Jawdat-Tayfour/LoveLocksProject/assets/40719001/51a754a3-9b38-497e-b808-e258f7a51102)
+
+
 - Once they accept it, you can add the details to the padlock
+![Post Accept for the first user](https://github.com/Jawdat-Tayfour/LoveLocksProject/assets/40719001/a6b21544-39c6-4e71-9185-8f13171bd68e)
+
 - Then, the padlock will be sent for them to read, add, delete and fix anything - about the details that you have added
 - When they finish up with the padlock the padlock gets published 
-- Once it’s published it cannot be removed nor viewed until the anniversary - - of your story, which, you have entered previously while creating the padlock. You also cannot create another one, just like a real Love Padlock.
+![Edit Padlock](https://github.com/Jawdat-Tayfour/LoveLocksProject/assets/40719001/74ad0366-d671-4597-845f-345b692992d4)
 
+- Once it’s published it cannot be removed nor viewed until the anniversary - - of your story, which, you have entered previously while creating the padlock. You also cannot create another one, just like a real Love Padlock.
+![Profile waiting for Lock Day](https://github.com/Jawdat-Tayfour/LoveLocksProject/assets/40719001/09be4729-6938-450e-b0ab-77ff518e6575)
 
 
 What can you do with the website after you create the padlock, or, if you didn’t have the ability to create a padlock (You had no one that you would like to share such an experience with)?
  
 You can scroll through other’s stories and mottos and add comments of your own which will show up on your profile for you to revisit whenever you want.
 
+![Padlock View to others](https://github.com/Jawdat-Tayfour/LoveLocksProject/assets/40719001/579567ba-411e-41cc-9e60-50bc99336372)
+![Padlock Details](https://github.com/Jawdat-Tayfour/LoveLocksProject/assets/40719001/9a299889-f61b-4c42-ab30-a92df907d1b1)
+![Create Comment](https://github.com/Jawdat-Tayfour/LoveLocksProject/assets/40719001/f7921a88-d1f8-446e-961e-b6f470684761)
+
+
 What happens on your Lock’s anniversary ?
 
 You can view and modify your padlock.
 
+![Profile at Lock Day](https://github.com/Jawdat-Tayfour/LoveLocksProject/assets/40719001/e4d284c4-3263-4160-94a6-bfbaccae4045)
+
 Can you search for certain padlocks that you have not commented on?
 
 Yes, just search their motto/title in your padlock search bar which only appears if you have created a padlock with someone.
+![Profile at Lock Day](https://github.com/Jawdat-Tayfour/LoveLocksProject/assets/40719001/31ceb26f-a876-4eda-8665-68deb3ce3772)
 
 What’s next ?
 

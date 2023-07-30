@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Love Locks | {{object.username}}'s profile</title>
+{% endblock title %}
+{% block content %}
+</br></br>
+<center>
+    <div class="col-sm-8">
+        <div class="card">
+            
+            <h2 class="card-header">Profile</h2>
+        </br>
+            <h3 class="card-title text-danger">{{object.first_name}} {{object.last_name}}</h3>
+            {% if object.user_locked_with %}
+            <h4 class="card-body">Locked with {{ object.user_locked_with  }}</h4>
+            {% endif %}
+            <p class="card-body text-muted"> Age: {{ object.age }}  |  Email: {{ object.email }}  | {% if object.lock_status  %}  My Lock Status: Locked {% else %} My Lock Status : No Locks {% endif %}   |  Username: {{ object.username }}   </p>
+        </br>
+        <a href="{% url 'profile_edit' user.id%}" class="btn btn-danger">Edit Profile</a>    
+        </div>
+            
+    </div>
+    {% if object.lock_published %}
+</br>
+    {% if profile_padlock.start_date.month == show_date.month and profile_padlock.start_date.day == show_date.day %}
+    
+    <div class="col-sm-8">
+        <div class="card">
+            <h2 class="card-header">Padlock</h2>
+            </br>
+            <h6 class="text-muted">{{ profile_padlock.lock_nature }}</h6>
+            </br>
+            <h3 class="card-title text-danger">{{ profile_padlock.motto_field }}</h3>
+            </br>
+            <h5 class="text-dark">{{ profile_padlock.start_date }}</h5>
+            {% if profile_padlock.story_field %}
+            <p class="card-body text-dark text-justify  "> {{ profile_padlock.story_field }}</p>
+            {% endif %}
+            <a href="{% url 'edit_padlock' profile_padlock.id %}" class="btn btn-dark">Update your padlock</a>
+        </br>
+    {% else %}
+    <div class="col-sm-8">
+        <div class="card">
+            <h2 class="card-header">Edit & Preview Padlock in {{ profile_padlock.start_date|timeuntil:show_date }}</h2>
+        </div>
+    
+    </div>
+</br>
+    {% endif %}
+
+    {% endif %}
+    {% if comment_list %}
+    <center>
+        <div class="container">
+        <div class="col-9">
+            <div class="card">
+                <h2 class="card-header">Comments<h2>
+                </br>
+                {% for comment in comment_list %}
+                <center>    
+                    
+                    <div class="row">
+                    
+                        <div class="col-4">   
+                                                        
+                                <h6 class=" card-body text-muted">{{ comment.date }} </h6>
+                            
+                        </div>
+                        
+                        <div class = "col-4">
+                            
+                                <h6 class="card-body text-dark">{{ comment.body }} </h6>
+                            
+                        </div>
+                        
+                        <div class = "col-4">
+                            
+                               <h6> <a class="card-body text-danger" href="{% url 'padlock_detail' comment.post.id %}">{{ comment.post.motto_field }} </a></h6>
+                            
+                    </div>
+                </div>
+                </center>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </center>        
+    {% else %}
+    <center>
+        <div class="col-sm-8">
+            <div class="card">
+                <h2 class="card-header">This User Has No Comments<h2>
+                </div>
+            </div>  
+    {% endif %}
+
+</center>
+{% endblock content %}

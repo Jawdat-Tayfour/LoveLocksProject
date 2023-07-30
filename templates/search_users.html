@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<center>
+    {% if search_bar %}
+    <h2>You searched for {{ search_bar }}</h2>
+    <br/>
+    {% for user in user_result %}
+        {% if not user.lock_status %}
+            <center>  
+                    <div class="col-sm-4" >
+                    <div class="card text-center">
+                        <h5 class="card-header">{{ user }}</h5>
+                        
+                        <div class="card-body">
+                        <a href="{% url 'create_lock' user.id %}" class="btn btn-outline-danger">Request Lock</a>
+                        </div>
+                    </div>
+                    </div>
+                </br>
+            <center>
+        {% endif %}
+    {% endfor %}
+    {% else %}
+    <h2>You forgot to search for something</h2>
+    {% endif %}
+            <center>
+{% endblock content %}
+
+    

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}<title>Love Locks | Sign up </title>{% endblock title %}
+{% if messages %}
+{% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+{% endfor %}
+{% endif %}
+{% block content %}
+</br></br>
+<center>
+    <div class="col-sm-6">
+        <div class="card">
+      
+            <h2 class="card-header">Sign Up</h2>
+        </br>
+            <form method="post">
+                {% csrf_token %}
+                {{ form|crispy}}
+                <button class='btn btn-outline-danger' type="submit">Sign Up</button>
+                
+            </form>
+        </br>
+            </div>
+        </div>
+    </div>
+</br></br></br>
+</center>
+{% endblock content %}

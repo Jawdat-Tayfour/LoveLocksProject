@@ -1,0 +1,40 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+{% block title %}<title>Love Locks. A memory</title>{% endblock title %}
+{% if messages %}
+{% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+{% endfor %}
+{% endif %}
+{% block content %}
+    {% if user.is_authenticated %}
+        {% for l in lr %}
+            {% if l %}
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-11 mb-3 ml-3">  
+                            <a href="{% url 'approve' l.id %}"class="btn btn-outline-dark">Accept {{ l.user1 }} </a>
+                            <a href="{% url 'decline' l.id %}" class="btn btn-outline-danger">Decline {{ l.user1 }}  </a>
+                        </div>
+                    </div>
+                </div>
+            {% else %}          
+            {% endif %}
+        {% endfor %}
+        
+        {% for padlock_post in padlocks_posts %}
+        <center>
+            <div class="card-rows">
+        <div class="card border-danger mb-3 " style="max-width: 18rem; max-height:18rem">
+            <div class="card-header"><a href='{% url 'padlock_detail' padlock_post.id %}' class='text-dark'>{{ padlock_post.creator.username }} and {{ padlock_post.modifier.username }}'s padlock</div></a></br>
+            <h5 class="card-title text-danger">{{ padlock_post.motto_field }}</h5>
+            <div class="card-body text-dark">
+            <p class="card-text text-justify text-truncate ">{{ padlock_post.story_field }}</p>
+            </div>
+            <small><div class="card-footer text-muted">{{ padlock_post.start_date}}</div></small>
+        </div>
+        </center>
+        {% endfor %}
+    {% endif %}
+
+{% endblock content %}

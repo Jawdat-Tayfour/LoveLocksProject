@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<center>
+    {% if search_bar %}
+    <h2>You searched for {{ search_bar }}</h2>
+    <br/>
+    {% for padlock in padlocks_result %}
+            <h1>hey</h1>
+            <center>  
+                <div class="card-rows">
+                    <div class="card border-danger mb-3 " style="max-width: 18rem; max-height:18rem">
+                        <div class="card-header"><a href='{% url 'padlock_detail' padlock.id %}' class='text-dark'>{{ padlock.creator.username }} and {{ padlock.modifier.username }}'s padlock</div></a></br>
+                        <h5 class="card-title text-danger">{{ padlock.motto_field }}</h5>
+                        <div class="card-body text-dark">
+                        <p class="card-text text-justify text-truncate ">{{ padlock.story_field }}</p>
+                        </div>
+                        <small><div class="card-footer text-muted">{{ padlock.start_date}}</div></small>
+                    </div>
+            <center>
+    {% endfor %}
+    {% else %}
+    <h2>You forgot to search for something</h2>
+    {% endif %}
+            <center>
+{% endblock content %}
+
+    

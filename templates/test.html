@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for l in lr %}
+{% if l %}
+<a href="{% url 'approve' l.id %}">accept {{ l.user1 }} </a>
+<a href="{% url 'create_lock' user.id %}">decline {{ l.user }}  </a>
+{% endif %}
+{% endfor %}
+<h2>Lock Status</h2>
+    {{ user.lock_status }}
+
+{% for user in allusers %}
+<a href="{% url 'create_lock' user.id %}">{{ user }} + </a>
+
+{% endfor %}
+
+
+{% endblock content %}

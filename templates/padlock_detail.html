@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block title %}
+<title> Love Locks | Behind the padlock. </title>
+{% endblock title %}
+{% block content %}
+</br></br>
+<center>
+    <div class="col-sm-8">
+        <div class="card">
+      
+            <h2 class="card-header">{{ object.creator }} and {{ object.modifier }}'s padlock </h2>
+        
+            </br>
+            <small><h6 class='text-muted'>{{object.lock_nature}}</h6></small>
+            </br>
+            <h3 class="text-danger"> {{object.motto_field}} </h3>
+            </br>
+            <h5 class="text-dark">{{ object.start_date }}</h5>
+        </br>
+            {% if  object.story_field|length > 1 %}
+                <p class="text-dark"> {{ object.story_field }} </p>
+            {% endif %}
+        </br>
+            </div>
+        </div>
+    </div>
+</br></br></br>
+</center>
+<center>
+    <div class="col-sm-8">
+        <div class="card">
+            <h2 class="card-header">Comments<h2>
+            {% if not object.comments.all %}
+                <p class="card-body">No Comments Yet.. <small><a class="badge badge-pill badge-danger" href="{% url 'create_comment' object.pk%}">Add one?</a></small></p>
+            {% else %}
+            <ul class="list-group list-group-flush">
+            {% for comment in object.comments.all %}
+            </br>
+            <div class="row-sm">
+                <div class="card">
+                    <div class="list-group-item">
+                        <p class='card-title'><h6 class="text-muted">{{ comment.date }} </h6><h6 class="text-danger">{{ comment.creator }}</h6>
+                        <h6 class=""> {{ comment.body }} </h6>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+            <br>
+            <small><a class="badge badge-pill badge-danger" href="{% url 'create_comment' object.pk%}">Add a comment</a></small>
+            <br>
+        </ul>
+            {% endif %}
+        </div>
+    </div>
+</br></br></br>
+</center>
+{% endblock content %}

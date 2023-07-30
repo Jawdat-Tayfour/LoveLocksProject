@@ -105,4 +105,7 @@ https://lnkd.in/dpY__47J
 
 Thanks for reading.
 
+
+P.S Update Smtop Setting in setting.py when launching the project on a development server
+
 #Django #Python #webdevelopment #project #bootstrap
